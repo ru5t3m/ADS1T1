@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class T2 {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
 
@@ -12,23 +12,22 @@ public class Main {
             arr[i] = input.nextInt();
         }
         // call findMinimum function to find minimum value in array
-        int minimum = findMinimum(arr);
+        double average = findAverage(arr);
         // output result
-        System.out.println(minimum);
+        System.out.println(average);
     }
 
-    public static int findMinimum(int[] arr) throws Exception {
-        int n = arr.length; // set new local variable that indicates an array length
+    public static double findAverage(int[] arr) throws Exception {
+        int n = arr.length;
         if (n == 0) {
             // if array is empty, return Exception error
             throw new Exception("n must be greater than 0 ");
         }
-        int minimum = arr[0]; //minimum value set
-        for (int i = 1; i < n; i++) {
-            if (arr[i] < minimum) {
-                minimum = arr[i]; //compare other values to the minimum and define another minimum value if a number is less
-            }
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
         }
-        return minimum; //"output" minimum
+        double average = (double) sum / n;
+        return average;
     }
 }
