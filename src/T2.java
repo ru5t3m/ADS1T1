@@ -27,7 +27,6 @@ public class T2 {
         for (int i = 0; i < n; i++) {
             sum += arr[i]; // find general sum of all values
         }
-        double average = (double) sum / n; // divide sum to a number of values to find average
-        return average;
+        return (double) sum / n;
     }
 }
