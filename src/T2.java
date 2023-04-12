@@ -23,11 +23,11 @@ public class T2 {
             // if array is empty, return Exception error
             throw new Exception("n must be greater than 0 ");
         }
-        int sum = 0;
+        int sum = 0; // set sum to zero
         for (int i = 0; i < n; i++) {
-            sum += arr[i];
+            sum += arr[i]; // find general sum of all values
         }
-        double average = (double) sum / n;
+        double average = (double) sum / n; // divide sum to a number of values to find average
         return average;
     }
 }
